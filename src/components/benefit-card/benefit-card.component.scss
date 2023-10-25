@@ -1,0 +1,47 @@
+@import "../../custom-theme.scss";
+
+.banefit-container {
+    position: relative;
+    overflow: hidden;
+    opacity: 50%;
+    transition: opacity 0.5s ease;
+
+    height: 18rem;
+    width: 100%;
+    flex-grow: 1;
+    border-radius: $container-radius;
+    background: linear-gradient(129.71deg, #040B12 48.12%, #013A31 203.12%);
+    
+    .highlight {
+        width: 50%;
+        height: 5rem;
+        position: absolute;
+        bottom: 0;
+        right: -10%;
+        background-color: #276B90;
+        border-radius: 25rem;
+        filter: blur(4rem);
+    }
+
+    .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        margin: 1.5rem;
+        h2 {
+            margin-top: 0;
+        }
+        .content-container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 1rem;
+            p {
+                color: $body-font-color;
+            }
+            img {
+                max-height: 11rem;
+            }
+        }
+    }
+}

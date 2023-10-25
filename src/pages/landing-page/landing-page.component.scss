@@ -1,0 +1,345 @@
+@import '../../custom-theme.scss';
+
+.landing-page-main {
+    width: 99vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 2rem;
+    }
+}
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+
+    .head-txt-1, .head-txt-2 {
+        font-size: 4rem;
+        text-align: center;
+        font-weight: bold;
+        line-height: 6.25rem;
+    }
+    .head-txt-2 {
+        background: linear-gradient(85.92deg, #0D57C8 11.04%, #4DE3D4 47.04%, #4B58C2 96.39%);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+    .head-txt-3 {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: .5rem;
+        margin-top: 1rem;
+    }
+    .primary-btn {
+        margin-top: 2rem;
+    }
+    .arrow-down {
+        position: absolute;
+        bottom: 2rem;
+        text-decoration: none;
+        color: white;
+
+        cursor: pointer;
+        animation: shake 2.5s infinite;
+        i {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.benefits-section {
+    height: 100vh;
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: $page-max-width;
+
+    .benefits-header {
+        text-align: center;
+        font-size: 3rem;
+        position: relative;
+        background-image: linear-gradient(90deg, transparent, #FCFCFC, transparent);
+        background-size: 200% 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-position: 50% 0;
+    }
+    .benefits-header-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p {
+            color: #fcfcfc8c;
+        }
+    }
+
+    .benefits-container {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .uppon-benefits-container {
+            width: 100%;
+            display: flex;
+            flex-grow: 1;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .bottom-benefits-container {
+            width: 100%;
+            display: flex;
+        }
+
+        app-benefit-card {
+            width: 100%;
+        }
+    }
+
+    //animations
+    .animate-benefits-header {
+        animation: shine 3s linear forwards;
+    }
+
+    .fade-benefits-header {
+        animation: fade 1s linear forwards;
+    }
+
+    .show-benefits-container {
+        display: flex;
+        opacity: 0;
+        animation: show 1s linear forwards;
+    }
+}
+
+.faq-section {
+
+    .faq-header-container {
+        text-align: center;
+    }
+
+    .head-main-txt {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .mat-expansion-panel {
+        background: none!important;
+    }
+
+    .mat-expansion-panel-header {
+        margin: .5rem 0;
+    }    
+
+    mat-panel-title {
+        font-size: 1.3rem;
+    }
+
+    mat-expansion-panel {
+        font-size: 1rem;
+    }
+
+    .common-questions {
+        margin: 5rem 0 8rem;
+        max-width: $page-max-width;
+    }
+}
+
+.cta-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: $page-max-width;
+
+    .icon-container {
+        position: relative;
+        width: 5.5rem;
+        height: 5.5rem;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9;
+        }
+    }
+    .icon-backgroud-item {
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: 50%;
+        border-radius: 5rem;
+        filter: blur(2.5rem);
+        background: #00887B;
+    }
+    .primary-btn {
+        margin-top: 2rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+footer {
+    width: 100%;
+    height: 5rem;
+    //max-height: ;
+
+    .footer-container {
+        position: relative;
+        max-height: 9rem;
+        overflow: hidden;
+    }
+    .footer-border {
+        height: 1px;
+        background: linear-gradient(90.05deg, rgba(14, 255, 230, 0) 0%, #84ECE1 13.01%, rgba(255, 255, 255, 0) 99.91%);       
+    }
+    .footer-content {
+        padding: 1rem 3rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .copyright {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding-bottom: 2rem;
+        font-size: 0.875rem;
+        a {
+            color: $primary-color;
+        }
+    }
+    .item-4 {
+        height: 3rem;
+        width: 15%;
+        bottom: -3.5rem;
+        left: 6%;
+        filter: blur(3rem);
+        z-index: 0;
+    }
+}
+
+.sign-up-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 98vw;
+    max-width: $page-max-width;
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .sign-up-form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 3rem 0 8rem;
+    }
+
+    .primary-btn {
+        max-height: 52px;
+    }
+
+    mat-form-field {
+        width: 100%;
+        max-width: 30rem;
+        margin-right: 3rem;
+    }
+
+    .visibleIcon {
+        display: block;
+        margin-bottom: 8rem;
+    }
+}
+
+.visible {
+    display: block;
+}
+.invisible {
+    display: none;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateY(0);
+    }
+    5% {
+        transform: translateY(-5px);
+    }
+    10% {
+        transform: translateY(0);
+    }
+    15% {
+        transform: translateY(5px);
+    }
+    20% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes shine {
+    0% {
+        background-position: 50% 0;
+    }
+    80% {
+        background-position: -160% 0;
+    }
+    100% {
+        background-position: -160% 0;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 100%;;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@media only screen and (max-width: $mobile-width) {
+    .uppon-benefits-container {
+        flex-direction: column;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+}
